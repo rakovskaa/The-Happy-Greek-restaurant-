@@ -1,0 +1,356 @@
+
+body {
+  background-color:goldenrod;
+  margin: 0;
+  padding: 0;
+  font-family: fantasy; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, p {text-align: center;}
+
+.content p {font-weight: 500;}
+
+section { 
+background-color: rgba(255, 235, 205, 0.5); 
+border-radius: 65px; 
+padding-top: 10px; 
+padding-left: 20px; 
+padding-right: 20px; 
+margin: 0 auto; 
+width: 100%; 
+max-width: 600px;
+box-sizing: border-box;}
+
+.hidden {display: none;}
+
+.hours-grid { display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.col p {
+  margin: 5px 0;
+  text-align: left;}
+
+
+img {width: 100%; height: auto;  display: block; border-radius: 3px;}
+
+.header-images {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  margin-top: 20px;
+}
+
+.header-images figure {
+  text-align: center;
+  width: 250px;
+}
+
+.header-images img {
+  width: 100%; 
+  height: auto;
+  border: 25px solid goldenrod;
+  border-radius: 3px;
+  display: block;
+  margin: 0 auto;
+}
+
+.header-images figcaption {
+  margin-top: 10px; margin-left: 40px;
+  font-family: fantasy;
+  font-size: 1.5em;
+  font-weight: bolder;
+  text-align: center;}
+
+article {position: relative; margin: 0; display: flex; 
+align-items: center; justify-content: center; text-align: center;}
+
+.food {text-align: left; width: 75%;}
+
+.price {text-align: right; width: 25%;}
+
+.content {display: flex; justify-content: center; align-items: center;
+ width: 100%; padding: 0 10px;}
+
+h2 {font-size: 1.8em; font-family:fantasy;}
+
+h1 {font-family:fantasy; font-style: oblique; color:cornflowerblue; font-size: 5em; 
+background-image: url("aegean\ view\ banner.jpeg");  background-size: cover; background-repeat: no-repeat;  
+border: 25px solid goldenrod; width: 50%; margin: 40px auto; border-radius: 3px;
+padding-top: 20px;}
+
+p {font-family: fantasy; font-size: 1.5em;}
+
+
+footer {
+text-align: center; font-family: fantasy; 
+background-color: burlywood; margin-left: 25px; margin-right: 17px;
+margin-bottom: 25px;
+padding: 20px;} 
+
+.review form {
+  display: flex; 
+  flex-direction:column; 
+  align-items: center;
+  gap: 10px;
+}
+
+label {display: block;
+font-family: fantasy; font-size: 1.3em;
+background-color: goldenrod; 
+padding: 10px 23px;
+margin-bottom: 15px;
+margin-top: 10px;
+border-radius: 5px;
+text-align: center;}
+
+#review-submit-btn {
+width: 50%; height: 30px;
+font-family: fantasy; 
+font-size: 1.1em;
+text-align: center;
+padding: 5px auto;
+border-radius: 5px;
+background-color: goldenrod;
+border-color: goldenrod;}
+
+textarea {
+  background-color:antiquewhite;
+  border-color: antiquewhite; border-radius: 5px;
+  caret-color: goldenrod;
+  margin-top: 10px;
+}
+
+textarea:focus {
+  outline: none; /* remove default blue outline */
+  border: 2px solid goldenrod; /* custom border */
+}
+
+.socials {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  padding: 0.5rem;
+  height: 340px;
+  width:auto;
+  margin: 0 auto;
+}
+
+.socials img {
+  width: 15vw;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.socials i, .socials p {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  transform: translateY(-30px);
+  margin: 0;
+  will-change: transform;
+}
+
+.reviews-btn {
+width: 50%; height: 30px;
+font-family: fantasy; 
+font-size: 1.1em;
+text-align: center;
+padding: 5px auto;
+border-radius: 5px;
+background-color: goldenrod;
+border-color: goldenrod;
+position: absolute;
+top: 50%; left: 50%; 
+transform: translate(-50%, -50%);
+z-index: 2;
+display: block;}
+
+.reviews figure {position: relative;
+width: 100%; text-align: center;
+max-width: 400px;aspect-ratio: 4 / 3;
+overflow: hidden; background: 5px;}
+
+#review-output {
+  background-color: antiquewhite; 
+  display: none;
+  position: relative;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  padding: 20px;
+  overflow-y: auto; 
+  box-sizing: border-box; 
+  object-fit: cover; 
+  text-align: center;
+  border-radius: 5px;}
+
+  #close-review {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: goldenrod;
+    line-height: 1;
+  }
+
+#reviews-container h4 {
+  margin-bottom: 4px;
+  font-weight:600;
+  font-family: fantasy;
+  font-size: 16px;
+  color: sienna;
+}
+
+#reviews-container p {
+  margin-bottom: 5px;
+  font-family: fantasy;
+  font-size: 19px;
+  color: sienna;
+  font-weight: 400;
+}
+
+.reviews {display: flex; justify-content: center; align-items: center;}
+
+.review-text {
+  font-family: fantasy; font-size: 16px; color: sienna;
+  text-align:left; margin: 20px;
+}
+
+.footer-grid {
+display: grid; 
+grid-template-columns: repeat(3, 1fr);
+gap: 1rem;
+margin: auto;
+}
+
+.footer-grid > div {
+display: flex; 
+justify-content: center;
+align-items: center; 
+background-size: cover; 
+background-position: center;
+}
+
+dialog {
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+dialog#review-modal {
+  position: fixed;
+  top: 89%;
+  left: -47%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background: burlywood;
+  z-index: 1000;
+}
+
+#confirm-submit, #cancel-btn {background-color: goldenrod; 
+font-family: fantasy;
+font-size: 1.1em;
+text-align: center;
+border-radius: 5px;
+padding: 10px 20px 0 20px;
+border: none;
+}
+
+#confirm-submit {
+  margin-left: -40px;
+  margin-right: 40px;
+}
+
+header {
+background-image: url("greek\ food\ border.jpg"); 
+background-size: cover; background-repeat: no-repeat;
+background-position: center; flex: 1;
+text-align: center; padding: 20px 0; font-family: fantasy;
+}
+
+.background-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  gap:25px;
+  margin: auto;
+  padding-top: 25px;
+  padding-right: 15px;
+  padding-left: 25px;
+  padding-bottom: 25px;
+}
+
+.background-grid > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg1 { background-image: url("whitewashed\ street.jpg"); }
+.bg2 {background-image: url("greek\ door.jpg");}
+.bg3 {background-image: url("greek\ table\ 2.jpg");}
+.bg4 {background-image: url("seaside\ tables.jpg");}
+/*.bg5 {background-image: url("greek\ backdrop.jpg");}*/
+/*.bg6 {background-image: url("greek\ outdoor.jpg");}*/
+
+.bg1, .bg2, .bg3, .bg4 {
+  min-height: 650px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dropdown {position: relative; display: block;}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: burlywood;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-btn {background: none; border: none; 
+color: black; font-family: fantasy;
+font-size: 1.1em; font-weight: 500;
+text-decoration: none; cursor: pointer;
+padding: 5px 10px; border-radius: 5px;
+display: inline-block;
+transition: background-color 0.3s ease-out;
+width: 100%; text-align: center;}
+
+.nav-btn:hover {background-color: goldenrod;}
+
+.main {font-weight: bold;}
+

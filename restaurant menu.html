@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="restaurant menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>THE HAPPY GREEK</h1>
+        <div class="header-images">
+  <figure>
+    <img src="seaside tables2.jpg" alt="Seaside tables">
+    <figcaption><button class="nav-btn main action" data-target="Opening-Hours">Opening Hours</button></figcaption>
+  </figure>
+  <figure>
+    <img src="lemons.jpg" alt="lemons">
+    <figcaption>
+        <div class="dropdown">
+            <button class="nav-btn main">Menu</button>
+            <ul class="dropdown-menu">
+                <li><button class="nav-btn action" data-target="Appetizers">Appetizers</button></li>
+                <li><button class="nav-btn action" data-target="Soups-and-Salads">Soups and Salads</button></li>
+                <li><button class="nav-btn action" data-target="Entrees">Entrees</button></li>
+            </ul>
+        </div>
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="meze table.jpeg" alt="meze table">
+    <figcaption><button class="nav-btn main action" data-target="Contact-and-Location">Contact and Location</button></figcaption>
+  </figure>
+</div>
+    </header>
+    <main>
+        <div class="background-grid">
+            <div class="bg1">
+            <section class="hidden" id="Appetizers">
+                <h2>Appetizers</h2>
+        <article>
+           <div class="content"><p class="food">Dolmates</p><p class="price">$8.99</p>
+            </div>
+        </article>
+        <article>
+            <div class="content"><p class="food">Spanakopita</p><p class="price">$9.99</p></div>
+        </article>
+        <article>
+            <div class="content"><p class="food">Tiropita</p><p class="price">$7.99</p></div>
+        </article>
+        <article>
+            <div class="content"><p class="food">Warm olives</p><p class="price">$4.99</p></div>
+        </article>
+        </section>
+    </div>
+            <div class="bg2">
+            <section class="hidden" id="Soups-and-Salads">
+            <h2>Soups and Salads</h2>
+        <article>
+            <div class="content"><p class="food">Dandellion greens</p><p class="price">$7.99</p></div>
+        <article>
+            <div class="content"><p class="food">Greek salad</p><p class="price">$9.99</p></div>
+        </article>
+        <article>
+            <div class="content"><p class="food">Orzo salad</p><p class="price">$11.99</p></div>
+        </article>
+        <article>
+            <div class="content"><p class="food">Lemon chicken noodle soup</p><p class="price">$8.99</p></div>
+        </article>
+        <article>
+            <div class="content"><p class="food">Fasolata</p><p class="price">$8.99</p></div>
+        </article>
+        </section>
+    </div>
+            <div class="bg3">
+            <section class="hidden" id="Entrees">
+            <h2>Entrees</h2>
+        <article>
+            <div class="content"><p class="food">Braised lamb shoulder with couscous</p><p class="price">$29.99</p></div>
+        </article>
+    <article>
+        <div class="content"><p class="food">Grilled octopus with roasted vegetables</p><p class="price">$32.99</p></div>
+    </article>
+<article>
+    <div class="content"><p class="food">Half a roasted chicken with lemon potatoes</p><p class="price">$22.99</p></div>
+</article>
+<article>
+    <div class="content"><p class="food">Grilled eggplant with rice pilaf</p><p class="price">$19.99</p></div>
+</article>
+<article>
+    <div class="content"><p class="food">Grilled trout with green beans</p><p class="price">$25.99</p></div>
+</article>
+</section>
+</div>
+<div class="bg4">
+    <section class="hidden" id="Contact-and-Location">
+        <h2>Contact and Location</h2>
+        <div>
+            <p class="contact">Email: thehappygreek@gmail.com</p>
+            <p class="contact">Tel: 916.747 1255</p>
+            <p class="location">645 17 Mile Dr, Pebble Beach, CA 93953</p>
+        </div>
+    </section>
+     <section class="hidden" id="Opening-Hours">
+    <h2>Opening Hours</h2>
+    <div class="hours-grid">
+    <div class="col">
+      <p>Monday</p>
+      <p>Tuesday</p>
+      <p>Wednesday</p>
+      <p>Thursday</p>
+      <p>Friday</p>
+      <p>Saturday</p>
+      <p>Sunday</p>
+    </div>
+    <div class="col">
+      <p>CLOSED</p>
+      <p>12PM - 9PM</p>
+      <p>12PM - 9PM</p>
+      <p>12PM - 9PM</p>
+      <p>12PM - 10PM</p>
+      <p>12PM - 10PM</p>
+      <p>12PM - 9PM</p>
+    </div>
+  </div>
+  </section>
+    </main>
+   <footer>
+    <!-- Modal is outside grid cells -->
+    <dialog id="review-modal">
+      <form method="dialog">
+        <label for="review">Your opinion matters to us</label>
+        <textarea rows="8" cols="38" id="review"></textarea>
+        <menu>
+          <button id="confirm-submit" value="submit">Submit</button>
+          <button id="cancel-btn" value="cancel">Cancel</button>
+        </menu>
+      </form>
+    </dialog>
+  <div class="footer-grid">
+    <div class="review">
+      <button id="review-submit-btn" type="button">Leave a review</button>
+    </div>
+
+    <!-- Socials -->
+    <div class="socials">
+        <img src="olives and bread.jpg" alt="olives and bread">
+      <p>Follow us:</p>
+      <a href="https://www.facebook.com/groups/244007217313130" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook fa-2x"></i>
+      </a>
+    </div>
+
+    <!-- Review display area -->
+    <div class="reviews">
+      <figure class="reviews-figure">
+        <button class="reviews-btn" type="button">Reviews</button>
+        <output id="review-output">
+            <button id="close-review" aria-label="Close review">&times;
+            </button>
+            <div id="reviews-container"></div>
+</output>
+      </figure>
+    </div>
+
+  </div>
+</footer>
+    <script type="module" src="restaurant menu.js"></script>
+</body>
+</html>
