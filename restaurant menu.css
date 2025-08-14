@@ -1,12 +1,22 @@
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color:goldenrod;
   margin: 0;
   padding: 0;
+  padding-bottom: 25px;
   font-family: fantasy; 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+html, body {
+  height: 100%;
+  overflow: visible;
 }
 
 h1, h2, p {text-align: center;}
@@ -51,6 +61,7 @@ img {width: 100%; height: auto;  display: block; border-radius: 3px;}
 .header-images figure {
   text-align: center;
   width: 250px;
+  max-width: 250px;
 }
 
 .header-images img {
@@ -60,10 +71,12 @@ img {width: 100%; height: auto;  display: block; border-radius: 3px;}
   border-radius: 3px;
   display: block;
   margin: 0 auto;
+  object-fit: cover;
 }
 
 .header-images figcaption {
-  margin-top: 10px; margin-left: 40px;
+  /*margin-top: 10px; margin-left: 30px;*/
+  margin: 10px auto;
   font-family: fantasy;
   font-size: 1.5em;
   font-weight: bolder;
@@ -76,14 +89,19 @@ align-items: center; justify-content: center; text-align: center;}
 
 .price {text-align: right; width: 25%;}
 
-.content {display: flex; justify-content: center; align-items: center;
+.content {display: flex; 
+  justify-content: center; 
+  align-items: center;
  width: 100%; padding: 0 10px;}
 
 h2 {font-size: 1.8em; font-family:fantasy;}
 
-h1 {font-family:fantasy; font-style: oblique; color:cornflowerblue; font-size: 5em; 
-background-image: url("aegean\ view\ banner.jpeg");  background-size: cover; background-repeat: no-repeat;  
-border: 25px solid goldenrod; width: 50%; margin: 40px auto; border-radius: 3px;
+h1 {font-family:fantasy; font-style: oblique; 
+color:cornflowerblue; font-size: 5em; 
+background-image: url("aegean\ view\ banner.jpeg");  
+background-size: cover; background-repeat: no-repeat;  
+border: 25px solid goldenrod; width: 50%; margin: 40px auto; 
+border-radius: 3px;
 padding-top: 20px;}
 
 p {font-family: fantasy; font-size: 1.5em;}
@@ -92,8 +110,28 @@ p {font-family: fantasy; font-size: 1.5em;}
 footer {
 text-align: center; font-family: fantasy; 
 background-color: burlywood; margin-left: 25px; margin-right: 17px;
-margin-bottom: 25px;
-padding: 20px;} 
+margin-top: 10px;
+position: relative;
+} 
+
+.spacer {
+  height: 25px !important;
+  min-height: 25px;
+  background-color: goldenrod !important;
+  color: black !important;
+  display: block !important;
+  width: 100% !important;
+  position: relative !important;
+  z-index: 9999 !important;
+  font-size: 16px !important;
+  line-height: 25px !important;
+  text-align: center !important;
+  overflow: auto!important;
+}
+
+.main-content {
+  flex-grow: 1 0 auto;
+}
 
 .review form {
   display: flex; 
@@ -112,6 +150,7 @@ border-radius: 5px;
 text-align: center;}
 
 #review-submit-btn {
+position: relative;
 width: 50%; height: 30px;
 font-family: fantasy; 
 font-size: 1.1em;
@@ -147,7 +186,7 @@ textarea:focus {
 }
 
 .socials img {
-  width: 15vw;
+  width: 290px;
   height: auto;
   position: absolute;
   top: 50%;
@@ -188,54 +227,6 @@ width: 100%; text-align: center;
 max-width: 400px;aspect-ratio: 4 / 3;
 overflow: hidden; background: 5px;}
 
-#review-output {
-  background-color: antiquewhite; 
-  display: none;
-  position: relative;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  padding: 20px;
-  overflow-y: auto; 
-  box-sizing: border-box; 
-  object-fit: cover; 
-  text-align: center;
-  border-radius: 5px;}
-
-  #close-review {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    border: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    color: goldenrod;
-    line-height: 1;
-  }
-
-#reviews-container h4 {
-  margin-bottom: 4px;
-  font-weight:600;
-  font-family: fantasy;
-  font-size: 16px;
-  color: sienna;
-}
-
-#reviews-container p {
-  margin-bottom: 5px;
-  font-family: fantasy;
-  font-size: 19px;
-  color: sienna;
-  font-weight: 400;
-}
-
-.reviews {display: flex; justify-content: center; align-items: center;}
-
-.review-text {
-  font-family: fantasy; font-size: 16px; color: sienna;
-  text-align:left; margin: 20px;
-}
 
 .footer-grid {
 display: grid; 
@@ -259,13 +250,15 @@ dialog {
 }
 
 dialog#review-modal {
-  position: fixed;
-  top: 89%;
-  left: -47%;
+  position: absolute;
+  top: 251%;
+  left: -48%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
   background: burlywood;
   z-index: 1000;
+  width: 320px;
+  height: 320px;
 }
 
 #confirm-submit, #cancel-btn {background-color: goldenrod; 
@@ -330,11 +323,14 @@ text-align: center; padding: 20px 0; font-family: fantasy;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: burlywood;
   list-style: none;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.dropdown-menu > li {
+  margin-left: 10px;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -354,3 +350,135 @@ width: 100%; text-align: center;}
 
 .main {font-weight: bold;}
 
+/*Mobile responsive styles*/
+@media (max-width: 768px) {
+  .header-images{
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .header-images figure {
+    width: 100%; max-width: 300px;
+  }
+
+h1 {
+  font-size: 2.5em; width: 90%; padding: 10px;
+}
+
+/*menu items layout stack instead of side by side*/
+.content {
+flex-direction: column !important;
+align-items: flex-start;
+gap: 5px;
+padding: 0;
+}
+
+.food, .price {
+  width: 100% !important;
+margin: 0;}
+   
+
+/*footer grid stacks vertically*/
+.footer-grid {
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 150px;
+}
+.bg1, .bg2, .bg3, .bg4 {
+  min-height: 500px; 
+  padding: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+align-items: center;
+}
+
+.nav-btn {
+  width: 100%;
+  text-align: center; /* keep text centered */
+  padding-left: 0; /* reset any left padding */
+  padding-right: 0; /* reset any right padding */
+  font-size: 1.1em;
+}
+
+.nav-btn {background: goldenrod; border: none; 
+color: black; font-family: fantasy;
+font-size: 1.1em; font-weight: 500;
+text-decoration: none; cursor: pointer;
+padding: 5px 10px; border-radius: 5px;
+margin-bottom: 10px;
+display: inline-block;
+transition: background-color 0.3s ease-out;
+width: 100%; text-align: center;}
+
+.dropdown-menu {
+  position: static; width: 100%;
+}
+
+.dropdown-menu > li {
+  margin-left: 0;
+}
+
+.socials i, .socials p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    transform: translateY(-30px); /* if you want the text to appear a bit higher */
+    text-align: center;
+  }
+
+   .socials img {
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 290px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+.footer-grid > div {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+   .socials {
+    position: relative;  /* keep relative for child absolute if needed */
+    width: 320px;        /* fixed width */
+    height: 340px;
+    top: 22%;
+    margin: 0 auto;      /* center horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    overflow: visible;
+}
+
+dialog#review-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background: burlywood;
+  z-index: 101;
+  width: 90%;
+  max-width: 320px;
+  max-height: 90vh; /*prevents overflow*/
+  overflow-y:auto; /*scroll inside modal if needed*/
+}
+}
