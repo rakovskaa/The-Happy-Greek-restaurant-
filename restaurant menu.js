@@ -71,16 +71,16 @@ actionButtons.forEach((button) => {
   });
 });
 /*Reviews logic*/
+
 const reviewSubmitBtn = document.getElementById("review-submit-btn");
 const modal = document.getElementById("review-modal");
 const confirmSubmit = document.getElementById("confirm-submit");
 const cancelBtn = document.getElementById("cancel-btn");
 const textarea = document.getElementById("review");
-  
 
 reviewSubmitBtn.addEventListener("click", (e) => {
-e.preventDefault();
-  modal.showModal();
+  modal.style.display = "block";
+
 });
 
 // Save review to Firestore
@@ -96,9 +96,21 @@ async function saveReview(date, text) {
   }
 }
 
+ // Cancel button clears and closes modal
+cancelBtn.addEventListener("click", () => {
+  textarea.value = "";
+  modal.style.display = "none";
+});
+
 // When confirm submit clicked, save the review
 confirmSubmit.addEventListener("click", async (e) => {
   e.preventDefault();
+
+  const reviewText = textarea.value.trim();
+  if (!reviewText) {
+    alert("Please enter a review");
+    return;
+  }
 
   const now = new Date();
   const dateString = now.toLocaleDateString("en-US", {
@@ -109,20 +121,7 @@ confirmSubmit.addEventListener("click", async (e) => {
     hour12: false, hour: "2-digit", minute: "2-digit", second: "2-digit",
   });
 
-  const reviewText = textarea.value.trim();
-  if (!reviewText) {
-    alert("Please enter a review");
-    return;
-  }
-
   await saveReview(dateString, reviewText);
   textarea.value = "";
-  modal.close();
-
-
-  // Cancel button clears and closes modal
-cancelBtn.addEventListener("click", () => {
-  textarea.value = "";
-  modal.close();
-});
+  modal.style.display = "block";
 });
