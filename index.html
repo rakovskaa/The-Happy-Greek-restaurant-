@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Restaurant Menu</title>
-    <link rel="stylesheet" href="restaurant menu.css">
+    <link rel="stylesheet" href="./restaurant menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -12,11 +12,11 @@
         <h1>THE HAPPY GREEK</h1>
         <div class="header-images">
   <figure>
-    <img src="seaside tables2.jpg" alt="Seaside tables">
+    <img src="./seaside-tables2.jpg" alt="Seaside tables">
     <figcaption><button class="nav-btn main action" data-target="Opening-Hours">Opening Hours</button></figcaption>
   </figure>
   <figure>
-    <img src="lemons.jpg" alt="lemons">
+    <img src="./lemons.jpg" alt="lemons">
     <figcaption>
         <div class="dropdown">
             <button class="nav-btn main">Menu</button>
@@ -29,7 +29,7 @@
     </figcaption>
   </figure>
   <figure>
-    <img src="meze table.jpeg" alt="meze table">
+    <img src="./meze-table.jpeg" alt="meze table">
     <figcaption><button class="nav-btn main action" data-target="Contact-and-Location">Contact and Location</button></figcaption>
   </figure>
 </div>
@@ -128,17 +128,6 @@
   </section>
     </main>
    <footer>
-    <!-- Modal is outside grid cells -->
-    <dialog id="review-modal">
-      <form method="dialog">
-        <label for="review">Your opinion matters to us</label>
-        <textarea rows="8" cols="38" id="review"></textarea>
-        <menu>
-          <button id="confirm-submit" value="submit">Submit</button>
-          <button id="cancel-btn" value="cancel">Cancel</button>
-        </menu>
-      </form>
-    </dialog>
   <div class="footer-grid">
     <div class="review">
       <button id="review-submit-btn" type="button">Leave a review</button>
@@ -146,7 +135,7 @@
 
     <!-- Socials -->
     <div class="socials">
-        <img src="olives and bread.jpg" alt="olives and bread">
+        <img src="./olives-and-bread.jpg" alt="olives and bread">
       <p>Follow us:</p>
       <a href="https://www.facebook.com/groups/244007217313130" target="_blank" aria-label="Facebook">
         <i class="fab fa-facebook fa-2x"></i>
@@ -156,7 +145,7 @@
     <!-- Review display area -->
     <div class="reviews">
       <figure class="reviews-figure">
-        <a href="reviews.html" target="_blank" class="review-link">
+        <a href="./reviews.html" target="_blank" class="review-link">
           <button class="reviews-btn" type="button">Reviews</button>
         </a>
         <output id="review-output">
@@ -168,6 +157,14 @@
   </div>
 </footer>
 <div  class="spacer" style="height: 25px; background-color: goldenrod;">&nbsp;</div>
-    <script type="module" src="restaurant menu.js"></script>
+    <script type="module" src="./restaurant menu.js"></script>
+    <div id="review-modal">
+        <label for="review">Your opinion matters to us</label>
+        <textarea rows="8" cols="38" id="review"></textarea>
+        <menu>
+          <button id="confirm-submit" value="submit">Submit</button>
+          <button id="cancel-btn" value="cancel">Cancel</button>
+        </menu>
+      </div>
 </body>
 </html>
