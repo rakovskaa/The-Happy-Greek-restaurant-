@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 html, body {
@@ -249,20 +250,10 @@ dialog {
 }
 
 dialog#review-modal {
-  /*position: absolute;
-  top: 251%;
-  left: -48%;
-  transform: translate(-50%, -50%);
-  border-radius: 5px;
-  background: burlywood;
-  z-index: 1000;
-  width: 320px;
-  height: 320px;*/
-
 position: fixed;
-  top: 92%;
-  left: -48%;
-  transform: translate(-50%, -50%);
+  top: 62%;
+  right: 65%;
+  /*transform: translate(-50%, -50%);*/
   border-radius: 5px;
   background: burlywood;
   z-index: 101;
