@@ -249,7 +249,7 @@ dialog {
 }
 
 dialog#review-modal {
-  position: absolute;
+  /*position: absolute;
   top: 251%;
   left: -48%;
   transform: translate(-50%, -50%);
@@ -257,7 +257,19 @@ dialog#review-modal {
   background: burlywood;
   z-index: 1000;
   width: 320px;
-  height: 320px;
+  height: 320px;*/
+
+position: fixed;
+  top: 92%;
+  left: -48%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background: burlywood;
+  z-index: 101;
+  width: 90%;
+  max-width: 320px;
+  max-height: 90vh; /*prevents overflow*/
+  overflow-y:auto; /*scroll inside modal if needed*/
 }
 
 #confirm-submit, #cancel-btn {background-color: goldenrod; 
