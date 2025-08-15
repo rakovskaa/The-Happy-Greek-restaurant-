@@ -97,7 +97,7 @@ h2 {font-size: 1.8em; font-family:fantasy;}
 
 h1 {font-family:fantasy; font-style: oblique; 
 color:cornflowerblue; font-size: 5em; 
-background-image: url("aegean\ view\ banner.jpeg");  
+background-image: url("./aegean-view-banner.jpeg");  
 background-size: cover; background-repeat: no-repeat;  
 border: 25px solid goldenrod; width: 50%; margin: 40px auto; 
 border-radius: 3px;
@@ -287,7 +287,7 @@ border: none;
 }
 
 header {
-background-image: url("greek\ food\ border.jpg"); 
+background-image: url("./greek-food-border.jpg"); 
 background-size: cover; background-repeat: no-repeat;
 background-position: center; flex: 1;
 text-align: center; padding: 20px 0; font-family: fantasy;
@@ -313,10 +313,10 @@ text-align: center; padding: 20px 0; font-family: fantasy;
   background-position: center;
 }
 
-.bg1 { background-image: url("whitewashed\ street.jpg"); }
-.bg2 {background-image: url("greek\ door.jpg");}
-.bg3 {background-image: url("greek\ table\ 2.jpg");}
-.bg4 {background-image: url("seaside\ tables.jpg");}
+.bg1 { background-image: url("./whitewashed-street.jpg"); }
+.bg2 {background-image: url("./greek-door.jpg");}
+.bg3 {background-image: url("./greek-table-2.jpg");}
+.bg4 {background-image: url("./seaside-tables.jpg");}
 /*.bg5 {background-image: url("greek\ backdrop.jpg");}*/
 /*.bg6 {background-image: url("greek\ outdoor.jpg");}*/
 
