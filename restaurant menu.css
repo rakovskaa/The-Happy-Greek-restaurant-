@@ -11,7 +11,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 html, body {
@@ -249,21 +248,23 @@ dialog {
   border-radius: 5px;
 }
 
-dialog#review-modal {
-position: fixed;
-  top: 62%;
-  right: 65%;
-  /*transform: translate(-50%, -50%);*/
+ #review-modal {
+  position:fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 5px;
   background: burlywood;
-  z-index: 101;
-  width: 90%;
-  max-width: 320px;
+  z-index: 10000;
+  width: 320px;
   max-height: 90vh; /*prevents overflow*/
   overflow-y:auto; /*scroll inside modal if needed*/
+  padding: 1rem;
 }
 
-#confirm-submit, #cancel-btn {background-color: goldenrod; 
+#confirm-submit, #cancel-btn {
+background-color: goldenrod; 
 font-family: fantasy;
 font-size: 1.1em;
 text-align: center;
@@ -275,6 +276,10 @@ border: none;
 #confirm-submit {
   margin-left: -40px;
   margin-right: 40px;
+}
+
+#cancel-btn {
+  margin-left: 53px;
 }
 
 header {
@@ -470,17 +475,18 @@ align-items: center;
     overflow: visible;
 }
 
-dialog#review-modal {
+  #review-modal {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: none;
   border-radius: 5px;
   background: burlywood;
-  z-index: 101;
-  width: 90%;
-  max-width: 320px;
+  z-index: 10000;
+  width: 320px;
   max-height: 90vh; /*prevents overflow*/
   overflow-y:auto; /*scroll inside modal if needed*/
+  padding: 1rem;
 }
 }
