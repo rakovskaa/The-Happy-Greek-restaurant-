@@ -404,7 +404,7 @@ text-align: center; padding: 20px 0; font-family: fantasy;
             
             .socials img { 
             position: absolute; 
-            top: 50%; 
+            top: 80%; 
             left: 50%; 
             transform: translate(-50%, -50%); 
             width: 290px; 
@@ -433,7 +433,9 @@ text-align: center; padding: 20px 0; font-family: fantasy;
               justify-content: center; 
               align-items: center;
               padding: 0.5rem; 
-              overflow: visible;}
+              overflow: visible;
+            color: inherit;
+            }
 
               #review-modal { 
               position: fixed; 
@@ -477,5 +479,12 @@ p, .contact, .location {
 .contact, .location {
   text-align: center;
   white-space: nowrap;
+  font-size: 0.8em;
+}
+
+.contact, .location {
+  -webkit-text-decoration: none; /* disable underline on iOS */
+  text-decoration: none;          /* standard property */
+  color: inherit;                 /* keep your current text color */
 }
 }
