@@ -134,7 +134,9 @@ text-align: center;}
 height: 30px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 1.1em; 
 text-align: center; padding: 5px auto; 
 border-radius: 5px; background-color: goldenrod; 
-border-color: goldenrod;}
+border-color: goldenrod;
+color: black;
+}
 
 textarea { 
 background-color:antiquewhite; 
@@ -364,12 +366,12 @@ text-align: center; padding: 20px 0; font-family: fantasy;
       justify-content: center; 
       align-items: center; } 
       
-      .nav-btn { 
+     /*.nav-btn { 
       width: 100%; 
-      text-align: center; /* keep text centered */ 
-      padding-left: 0; /* reset any left padding */
-       padding-right: 0; /* reset any right padding */ 
-       font-size: 1.1em; } 
+      text-align: center; 
+      padding-left: 0; 
+       padding-right: 0; 
+       font-size: 1.1em; }*/ 
        
        .nav-btn {
         background: goldenrod; border: none; 
@@ -448,6 +450,12 @@ text-align: center; padding: 20px 0; font-family: fantasy;
 
 @media (max-width: 400px) {
   .hours-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .hours-grid p {
+    white-space: nowrap;
+    font-size: 1.1em;
   }
 }
