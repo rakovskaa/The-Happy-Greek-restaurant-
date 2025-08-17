@@ -426,7 +426,7 @@ text-align: center; padding: 20px 0; font-family: fantasy;
               position: relative; /* keep relative for child absolute if needed */ 
               width: 320px; /* fixed width */ 
               height: 340px; 
-              top: 32%; 
+              top: 12%; 
               margin: 0 auto; /* center horizontally */ 
               display: flex; 
               flex-direction: column; 
@@ -462,7 +462,7 @@ text-align: center; padding: 20px 0; font-family: fantasy;
     font-size: 1.1em;
   }
 
-* Disable automatic phone/email/address link styling on iOS */
+ /* Disable automatic phone/email/address link styling on iOS */
 a, a:visited, a:hover, a:active, a:focus {
   text-decoration: none; /* no underline */
   color: inherit; /* keep original color */
@@ -476,5 +476,6 @@ p, .contact, .location {
 
 .contact, .location {
   text-align: center;
+  white-space: nowrap;
 }
 }
