@@ -255,6 +255,7 @@ color: black;
     padding: 10px 20px; 
     border: none;
     cursor: pointer;
+    color: black;
     } 
     
     header {
@@ -377,7 +378,7 @@ text-align: center; padding: 20px 0; font-family: fantasy;
        
        .nav-btn {
         background: goldenrod; border: none; 
-        color: black; font-family: fantasy; 
+        color: black; font-family: Verdana, Geneva, Tahoma, sans-serif; 
         font-size: 1.1em; font-weight: 500; 
         text-decoration: none; cursor: pointer; 
         padding: 5px 10px; border-radius: 5px; 
@@ -425,7 +426,7 @@ text-align: center; padding: 20px 0; font-family: fantasy;
               position: relative; /* keep relative for child absolute if needed */ 
               width: 320px; /* fixed width */ 
               height: 340px; 
-              top: 22%; 
+              top: 32%; 
               margin: 0 auto; /* center horizontally */ 
               display: flex; 
               flex-direction: column; 
