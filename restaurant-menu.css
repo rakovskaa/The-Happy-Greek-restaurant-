@@ -462,9 +462,19 @@ text-align: center; padding: 20px 0; font-family: fantasy;
     font-size: 1.1em;
   }
 
-  #Contact-and-Location{
-  text-decoration: none;
-  font-size: 1em;
-  white-space: nowrap;
+* Disable automatic phone/email/address link styling on iOS */
+a, a:visited, a:hover, a:active, a:focus {
+  text-decoration: none; /* no underline */
+  color: inherit; /* keep original color */
+}
+
+p, .contact, .location {
+  -webkit-touch-callout: none;  /* disables callout menu on long tap */
+  -webkit-user-select: text;    /* keeps text selectable */
+  -webkit-text-decoration: none; /* disables auto-underlining on iOS */
+}
+
+#Contact-and-Location {
+  text-align: center;
 }
 }
