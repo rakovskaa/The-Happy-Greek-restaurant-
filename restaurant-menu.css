@@ -474,7 +474,7 @@ p, .contact, .location {
   -webkit-text-decoration: none; /* disables auto-underlining on iOS */
 }
 
-#Contact-and-Location {
+.contact, .location {
   text-align: center;
 }
 }
