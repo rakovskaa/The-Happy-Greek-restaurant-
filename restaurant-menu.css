@@ -452,6 +452,24 @@ text-align: center; padding: 20px 0; font-family: fantasy;
               padding: 1rem; } 
             }
 
+            .socials img { 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            width: 290px; 
+            height: auto; 
+            border-radius: 10px; 
+            object-fit: cover; 
+            z-index: 0; } 
+
+            .socials i, .socials p { 
+            position: relative; 
+            z-index: 1; margin: 0; 
+            transform: translateY(-30px); 
+            /* if you want the text to appear a bit higher */ 
+            text-align: center; } 
+
 
 @media (max-width: 400px) {
   .hours-grid {
@@ -463,6 +481,12 @@ text-align: center; padding: 20px 0; font-family: fantasy;
     white-space: nowrap;
     font-size: 1.1em;
   }
+
+  .socials i.fab.fa-facebook {
+    color: #1877F2; /* Facebook blue */
+}
+
+
 
 .socials img { 
             position: absolute; 
@@ -497,7 +521,7 @@ p, .contact, .location {
 .contact, .location {
   text-align: center;
   white-space: nowrap;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .contact, .location {
