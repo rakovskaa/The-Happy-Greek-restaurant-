@@ -404,7 +404,7 @@ text-align: center; padding: 20px 0; font-family: fantasy;
             
             .socials img { 
             position: absolute; 
-            top: 80%; 
+            top: 50%; 
             left: 50%; 
             transform: translate(-50%, -50%); 
             width: 290px; 
@@ -464,6 +464,24 @@ text-align: center; padding: 20px 0; font-family: fantasy;
     font-size: 1.1em;
   }
 
+.socials img { 
+            position: absolute; 
+            top: 65%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            width: 290px; 
+            height: auto; 
+            border-radius: 10px; 
+            object-fit: cover; 
+            z-index: 0; } 
+
+            .socials i, .socials p { 
+            position: relative; 
+            z-index: 1; margin: 0; 
+            transform: translateY(-30px); 
+            /* if you want the text to appear a bit higher */ 
+            text-align: center; } 
+
  /* Disable automatic phone/email/address link styling on iOS */
 a, a:visited, a:hover, a:active, a:focus {
   text-decoration: none; /* no underline */
@@ -479,7 +497,7 @@ p, .contact, .location {
 .contact, .location {
   text-align: center;
   white-space: nowrap;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 .contact, .location {
