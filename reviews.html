@@ -25,16 +25,38 @@
                 color: #777;
                 margin-bottom: 5px;
             }    
+
+            .button {
+                text-align: center;
+                margin: 10px auto;
+            }
+
+            button {
+                width: 20vw;
+                height: auto;
+                font-size: 1.4em;
+                background-color: goldenrod;
+                border-radius: 5px;
+                border-color: goldenrod;
+            }
+            @media (max-width: 768px) {
+          button {
+            font-size: 1.1em;
+          }
+            }
             
         </style>
     </head>
     <body>
-        <h1>Customer Reviews</h1>
+        <div class="button">
+            <button type="button" id="return-btn">Return to The Happy Greek website</button> 
+        </div>
+            <h1>Customer Reviews</h1>
 
         <div id="reviews-container">
             <!--reviews go here-->
         </div>
-         
+        
         <script type="module">
             import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 import { getFirestore, collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
@@ -76,6 +98,11 @@ async function loadReviews() {
 }
 
 document.addEventListener("DOMContentLoaded", loadReviews);
+
+const returnBtn = document.getElementById("return-btn");
+returnBtn.addEventListener("click", () => {
+    window.location.href = "restaurant-menu.html";
+});
         </script>
     </body>
 </html>
