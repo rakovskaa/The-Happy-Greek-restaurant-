@@ -25,7 +25,7 @@ text-align: center;
 h1 {
 font-family:Verdana, Geneva, Tahoma, sans-serif;  
 text-align: center;
-color:cornflowerblue; font-size: 4em; 
+color:blue; font-size: 4em; 
 background-image: url("./aegean-view-banner.jpeg");  
 background-size: cover; background-repeat: no-repeat;  
 border: 25px solid goldenrod; width: 50%; margin: 40px auto; 
@@ -37,11 +37,12 @@ padding-bottom: 10px;}
 
 p {font-weight: 500;}
 
-section { background-color: rgba(255, 235, 205, 0.5); 
+section { background-color: rgba(255, 235, 205, 0.85 ); 
 border-radius: 65px; padding-top: 10px; 
 padding-left: 20px; padding-right: 20px; 
-margin: 0 auto; width: 100%; max-width: 600px; 
-box-sizing: border-box;}
+margin: auto; width: 100%; max-width: 600px; 
+box-sizing: border-box;
+}
 
 .hidden {display: none;} 
 
@@ -75,7 +76,6 @@ border: 25px solid goldenrod; border-radius: 3px;
 display: block; margin: 0 auto; object-fit: cover; } 
 
 .header-images figcaption { 
-/*margin-top: 10px; margin-left: 30px;*/ 
 margin: 10px auto; font-family: Verdana, Geneva, Tahoma, sans-serif; 
 font-size: 1.5em; 
 font-weight: bolder; text-align: center;}
@@ -97,6 +97,15 @@ margin: 20px auto;
 align-items: center; width: 100%; padding: 10px;} 
 
 p {font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 1.5em;}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
 
 footer { 
 text-align: center; 
@@ -259,22 +268,23 @@ color: black;
     } 
     
     header {
-background-image: url("./greek-food-border.jpg"); 
-background-size: cover; background-repeat: no-repeat;
-background-position: center; flex: 1;
-text-align: center; padding: 20px 0; font-family: fantasy;
-} 
+   background-image: url("./greek-food-border.jpg"); 
+   background-size: cover; background-repeat: no-repeat;
+   background-position: center; flex: 1;
+   text-align: center; padding: 20px 0; font-family: fantasy;
+   } 
     
     .background-grid {
      display: grid; 
-     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-     grid-template-rows: auto; 
+     /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+     grid-template-rows: auto;*/
      gap:25px; 
      margin: auto; 
      padding-top: 25px; 
      padding-right: 15px; 
      padding-left: 25px; 
-     padding-bottom: 25px; 
+     padding-bottom: 25px;
+     grid-template-columns: repeat(2, 1fr);
     }
 
     .background-grid > div { 
@@ -284,10 +294,10 @@ text-align: center; padding: 20px 0; font-family: fantasy;
     background-size: cover; 
     background-position: center; }
     
-.bg1 { background-image: url("./whitewashed-street.jpg"); }
-.bg2 {background-image: url("./greek-door.jpg");}
-.bg3 {background-image: url("./greek-table-2.jpg");}
-.bg4 {background-image: url("./seaside-tables.jpg");}
+   .bg1 { background-image: url("./whitewashed-street.jpg"); }
+   .bg2 {background-image: url("./greek-door.jpg");}
+   .bg3 {background-image: url("./greek-table-2.jpg");}
+   .bg4 {background-image: url("./seaside-tables.jpg");}
     
     /*.bg5 {background-image: url("greek\ backdrop.jpg");}*/ 
     /*.bg6 {background-image: url("greek\ outdoor.jpg");}*/ 
@@ -311,13 +321,14 @@ text-align: center; padding: 20px 0; font-family: fantasy;
      box-sizing: border-box; } 
      
      .dropdown-menu > li { 
-      margin-left: 10px; } 
+      margin-left: 0; 
+    margin-top: 10px;} 
       
       .dropdown:hover .dropdown-menu { 
       display: block; } 
       
       .nav-btn {
-      background: none; border: none; 
+      background-color: goldenrod; border: none; 
       color: black; font-family: Verdana, Geneva, Tahoma, sans-serif; 
       font-size: 1.2em;  
       text-decoration: none; 
@@ -329,14 +340,16 @@ text-align: center; padding: 20px 0; font-family: fantasy;
       width: 100%; 
       text-align: center;} 
       
-      .nav-btn:hover {
-      background-color: goldenrod;} 
+      /*.nav-btn:hover {
+      background-color: goldenrod;}*/
       
       .main {font-weight: bold;}
 
       /*Mobile responsive styles*/ 
-      @media (max-width: 768px) {
-      .header-images{ flex-wrap: wrap; gap: 20px; } 
+      @media (max-width: 1024px) {
+
+      .header-images{ 
+      flex-wrap: wrap; gap: 20px;} 
       
       .header-images figure { 
       width: 100%; 
@@ -359,22 +372,16 @@ text-align: center; padding: 20px 0; font-family: fantasy;
       grid-template-columns: 1fr; gap: 10px; 
       margin-top: 150px; } 
       
+     /*.background-grid {
+      grid-template-columns: repeat(2, 1fr); 
+     }
+
       .bg1, .bg2, .bg3, .bg4 { 
-      min-height: 500px; padding: 10px; 
+      min-height: 400px; padding: 10px; 
       background-size: cover; 
       background-position: center;
       background-repeat: no-repeat;
-      display: flex; 
-      flex-direction: column; 
-      justify-content: center; 
-      align-items: center; } 
-      
-     /*.nav-btn { 
-      width: 100%; 
-      text-align: center; 
-      padding-left: 0; 
-       padding-right: 0; 
-       font-size: 1.1em; }*/ 
+      }*/
        
        .nav-btn {
         background: goldenrod; border: none; 
@@ -469,9 +476,19 @@ text-align: center; padding: 20px 0; font-family: fantasy;
             transform: translateY(-30px); 
             /* if you want the text to appear a bit higher */ 
             text-align: center; } 
+      
 
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
+
+ .background-grid {
+  grid-template-columns: 1fr;
+ }
+
+ .bg1, .bg2, .bg3, .bg4 {
+  min-height: 250px;
+ }
+
   .hours-grid {
     grid-template-columns: 1fr 1fr;
     gap: 5px;
