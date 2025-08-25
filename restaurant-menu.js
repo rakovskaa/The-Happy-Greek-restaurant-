@@ -82,6 +82,7 @@ const textarea = document.getElementById("review");
 
 reviewSubmitBtn.addEventListener("click", (e) => {
   modal.style.display = "block";
+  textarea.focus();
 
 });
 
@@ -123,7 +124,11 @@ confirmSubmit.addEventListener("click", async (e) => {
     hour12: false, hour: "2-digit", minute: "2-digit", second: "2-digit",
   });
 
+
   await saveReview(dateString, reviewText);
   textarea.value = "";
-  modal.style.display = "block";
+  modal.style.display = "none";
+  loadReviews();
 });
+
+
